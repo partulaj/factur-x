@@ -33,9 +33,15 @@ class Writer
     ];
     public const XML_FILENAME = 'Factur-X_extension_schema.xmp';
 
-    protected ?string $profile = null;
+    /**
+     * @var string|null
+     */
+    protected $profile;
 
-    protected bool $importExternalLinks = true;
+    /**
+     * @var bool
+     */
+    protected $importExternalLinks = true;
 
     public function __construct(bool $importExternalLinks = true)
     {

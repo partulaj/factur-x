@@ -22,17 +22,20 @@ class XsdValidator
         ProfileHandler::PROFILE_ZUGFERD => 'zugferd/ZUGFeRD1p0.xsd',
     ];
 
-    protected ?string $profile = null;
+    /**
+     * @var string|null
+     */
+    protected $profile;
 
     /**
      * @var \LibXMLError[]
      */
-    protected array $xmlErrors = [];
+    protected $xmlErrors = [];
 
     /**
      * @var string[]
      */
-    protected array $errors = [];
+    protected $errors = [];
 
     /**
      * Validates Factur-X XML against XSD.
